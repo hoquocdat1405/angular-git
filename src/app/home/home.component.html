@@ -2,10 +2,17 @@
 <h2>Chao ban {{name}}</h2>
 <input value="{{name}}"/>
 <br/>
-<input [(ngModel)]="name" title="sas"/>
+<input [(ngModel)]="age" title="sas"/>
 
-<h2 *ngIf="age> 18">Ban >18 tuoi</h2>
-<h2 *ngIf="age<=18">Ban <=18 tuoi</h2>
+<!-- <h2 *ngIf="age> 18">Ban >18 tuoi</h2>
+<h2 *ngIf="age<=18">Ban <=18 tuoi</h2> -->
+
+<h2 *ngIf="age > 18; then tre; else gia"></h2>
+
+<ng-template #tre><h2>Ban >18 tuoi</h2></ng-template>
+<ng-template #gia><h2>Ban <= 18 tuoi</h2></ng-template>
+
+
 <!-- (): ben ngoai gui vao ben trong code
 [] : ben trong code gui ra ben ngoai -->
 <button (click)="resetName()">Reset ten</button>
