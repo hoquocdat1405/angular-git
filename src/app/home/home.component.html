@@ -17,3 +17,7 @@
 [] : ben trong code gui ra ben ngoai -->
 <button (click)="resetName()">Reset ten</button>
 
+<div *ngFor="let personName of familyName ; let i = index ">
+    <li>{{i + 1}} . {{personName}}</li>
+</div>
+
