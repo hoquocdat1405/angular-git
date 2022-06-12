@@ -33,7 +33,7 @@
     </tr>
     <tr *ngFor="let person of family2; let i = index">
         <td>{{i+1}}</td>
-        <td>{{person.name}}</td>
+        <td>{{person.name | lowercase}}</td>
         <td [ngClass]="{ 'duoi40' : person.age < 40}">{{person.age}}</td>
         <td *ngIf="person.sex">Nam</td>
         <td *ngIf="person.sex==false">Nu</td>

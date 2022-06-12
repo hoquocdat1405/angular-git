@@ -7,6 +7,13 @@
   <title>Document</title>
 </head>
 <body>
-    <app-home></app-home>
+    <nav>
+      <ul>
+        <li><a routerLink="/home" >Home component</a></li>
+        <li><a routerLink="/cascading" >Cascading Component</a></li>
+      </ul>
+    </nav>
+    <!-- The routed views render in the <router-outlet>-->
+    <router-outlet></router-outlet>
 </body>
 </html>
