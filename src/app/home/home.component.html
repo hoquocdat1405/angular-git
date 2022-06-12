@@ -1,8 +1,12 @@
 <p>Component Home</p>
 <h2>Chao ban {{name}}</h2>
-<input value="{{name}}"/>
+<input [(ngModel)]="name"/>
 <br/>
 <input [(ngModel)]="age" title="sas"/>
+<!-- (): ben ngoai gui vao ben trong code
+[] : ben trong code gui ra ben ngoai -->
+
+
 
 <!-- <h2 *ngIf="age> 18">Ban >18 tuoi</h2>
 <h2 *ngIf="age<=18">Ban <=18 tuoi</h2> -->
@@ -13,11 +17,26 @@
 <ng-template #gia><h2>Ban <= 18 tuoi</h2></ng-template>
 
 
-<!-- (): ben ngoai gui vao ben trong code
-[] : ben trong code gui ra ben ngoai -->
+
 <button (click)="resetName()">Reset ten</button>
 
-<div *ngFor="let personName of familyName ; let i = index ">
-    <li>{{i + 1}} . {{personName}}</li>
+<div *ngFor="let person of family ; let i = index ">
+    <li>{{i + 1}} . {{person}}</li>
 </div>
+
+<table class="table">
+    <tr>
+        <th>STT</th>
+        <th>Ten</th>
+        <th>Gia</th>
+        <th>Gioi tinh</th>
+    </tr>
+    <tr *ngFor="let person of family2; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{person.name}}</td>
+        <td [ngClass]="{ 'duoi40' : person.age < 40}">{{person.age}}</td>
+        <td *ngIf="person.sex">Nam</td>
+        <td *ngIf="person.sex==false">Nu</td>
+    </tr>
+</table>
 

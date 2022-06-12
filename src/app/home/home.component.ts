@@ -8,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   public name: string ='Dat';
   public age: number = 22;
-  public familyName = ['THanh','Hoa','Tuan','Dat'];
+  public family = ['Thanh','Hoa','Tuan','Dat'];
+  public family2 = [
+    {name:'Thanh',age:60,sex:true},
+    {name:'Hoa',age:50,sex:false},
+    {name:'Tuan',age:40,sex:true},
+    {name:'Dat',age:30,sex:true}];
+
+ 
   constructor() { }
 
   ngOnInit(): void {
