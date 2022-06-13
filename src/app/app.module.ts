@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CascadingComponent } from './cascading/cascading.component';
+import { SwitchComponent } from './switch/switch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CascadingComponent
+    CascadingComponent,
+    SwitchComponent
   ],
   imports: [
     BrowserModule,
