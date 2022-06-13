@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CascadingComponent } from './cascading/cascading.component';
 import { SwitchComponent } from './switch/switch.component';
+import { HighLightDirective } from './Directives/high-light.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CascadingComponent,
-    SwitchComponent
+    SwitchComponent,
+    HighLightDirective
   ],
   imports: [
     BrowserModule,
